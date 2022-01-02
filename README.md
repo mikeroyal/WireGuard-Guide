@@ -1,5 +1,5 @@
 <h1 align="center">
- <img src="">
+ <img src="https://user-images.githubusercontent.com/45159366/147891038-00f57362-e843-4bfb-be31-606c954d4e6c.png">
   <br />
  WireGuard Guide
 </h1>
@@ -9,7 +9,7 @@
 **Note: You can easily convert this markdown file to a PDF in [VSCode](https://code.visualstudio.com/) using this handy extension [Markdown PDF](https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf).**
 
 <p align="center">
- <img src="">
+ <img src="https://user-images.githubusercontent.com/45159366/147891040-da2f6812-d0b0-40d4-a7a1-55d0080023fe.png">
   <br />
 </p>
 
@@ -31,6 +31,14 @@
 7. [Amazon Web Services (AWS)](https://github.com/mikeroyal/WireGuard-Guide#amazon-web-services-aws)
 
 8. [Google Cloud](https://github.com/mikeroyal/WireGuard-Guide#goodle-cloud-platform-gcp)
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/147891041-53cf9e34-158c-458e-9765-6c8f45d7af7b.png">
+  <br />
+How WireGuard is implemented in NordLynx
+</p>
+
+NordLynx. Source: [NordVPN](https://nordvpn.com/blog/nordlynx-protocol-wireguard/)
 
 # Getting Started with WireGuard
 [Back to the Top](https://github.com/mikeroyal/WireGuard-Guide#table-of-contents)
