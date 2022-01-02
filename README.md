@@ -16,7 +16,7 @@
 
 # Table of Contents
 
-1. [Getting Started with WireGuard](https://github.com/mikeroyal/WireGuard-Guide#)
+1. [Getting Started with WireGuard](https://github.com/mikeroyal/WireGuard-Guide#getting-started-with-wireguard)
 
 2. [Networking](https://github.com/mikeroyal/WireGuard-Guide#networking)
 
@@ -30,12 +30,12 @@
 
 7. [Amazon Web Services (AWS)](https://github.com/mikeroyal/WireGuard-Guide#amazon-web-services-aws)
 
-8. [Google Cloud](https://github.com/mikeroyal/WireGuard-Guide#goodle-cloud-platform-gcp)
+8. [Google Cloud](https://github.com/mikeroyal/WireGuard-Guide#google-cloud-platform-gcp)
 
 <p align="center">
  <img src="https://user-images.githubusercontent.com/45159366/147891041-53cf9e34-158c-458e-9765-6c8f45d7af7b.png">
   <br />
-How WireGuard is implemented in NordLynx
+How the WireGuard protocol works in NordLynx
 </p>
 
 NordLynx. Source: [NordVPN](https://nordvpn.com/blog/nordlynx-protocol-wireguard/)
