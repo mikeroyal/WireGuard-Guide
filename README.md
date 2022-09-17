@@ -17,6 +17,10 @@
 # Table of Contents
 
 1. [Getting Started with WireGuard](https://github.com/mikeroyal/WireGuard-Guide#getting-started-with-wireguard)
+     * [Tutorials](https://github.com/mikeroyal/WireGuard-Guide#tutorials)
+     * [Books](https://github.com/mikeroyal/WireGuard-Guide#books)
+     * [Podcasts](https://github.com/mikeroyal/WireGuard-Guide#podcasts)
+     * [WireGuard Tools](https://github.com/mikeroyal/WireGuard-Guide#wireguard)
 
 2. [Networking](https://github.com/mikeroyal/WireGuard-Guide#networking)
 
@@ -32,20 +36,93 @@
 
 8. [Google Cloud](https://github.com/mikeroyal/WireGuard-Guide#google-cloud-platform-gcp)
 
-<p align="center">
- <img src="https://user-images.githubusercontent.com/45159366/147891041-53cf9e34-158c-458e-9765-6c8f45d7af7b.png">
-  <br />
-How the WireGuard protocol works in NordLynx
-</p>
-
-NordLynx. Source: [NordVPN](https://nordvpn.com/blog/nordlynx-protocol-wireguard/)
 
 # Getting Started with WireGuard
-[Back to the Top](https://github.com/mikeroyal/WireGuard-Guide#table-of-contents)
+[Back to the Top](#table-of-contents)
 
-[WireGuard®](https://www.wireguard.com/) is a straight-forward, fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general-purpose VPN for running on embedded interfaces and super computers alike, fit for many circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. It is currently under a massive development, but it already might be regarded as the most secure, most comfortable to use, and the simplest VPN solution in the industry.
+[WireGuard®](https://www.wireguard.com/) is a straight-forward, fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec while avoiding the massive headache. WireGuard is designed as a general-purpose VPN for running on embedded interfaces and super computers alike, fit for many circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. 
 
-[Wiretrustee](https://wiretrustee.com/) is a WireGuard®-based mesh network that connects your devices into a single private network.
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190848622-d1c8b109-f08c-4a89-b43d-816c510e4f2e.png">
+  <br />
+</p>
+
+### Tutorials
+[Back to the Top](#table-of-contents)
+
+ * [Quick Start | WireGuard](https://www.wireguard.com/quickstart/)
+
+ * [Virtual Private Networks — WireGuard | pfSense Documentation](https://docs.netgate.com/pfsense/en/latest/vpn/wireguard/index.html)
+ 
+ * [How To Set Up WireGuard | DigitalOcean](https://www.digitalocean.com/community/tutorial_collections/how-to-set-up-wireguard)
+ 
+ * [Linode Guides & Tutorials](https://www.linode.com/docs/guides/)
+  
+ * [Linode Beginner's Guide](https://www.linode.com/docs/guides/linode-beginners-guide/)
+ 
+ * [Access a Pi-hole or Raspberry Pi from anywhere | Tailscale](https://tailscale.com/kb/1114/pi-hole/)
+  
+ * [Tailscale on Kubernetes | Tailscale](https://tailscale.com/kb/1185/kubernetes/)
+  
+ * [Tailscale on Proxmox host | Tailscale](https://tailscale.com/kb/1133/proxmox/)
+  
+ * [Configuring Linux DNS | Tailscale](https://tailscale.com/kb/1188/linux-dns/)
+ 
+ * [WireGuard Introduction - John Hanley](https://www.jhanley.com/wireguard-introduction/)
+ 
+ * [WireGuard Setup on Azure](https://pinloon.gitbook.io/wiki/vpn/wireguard-setup-on-azure)
+ 
+ * [Creating a VPN Gateway with a Unikernel running WireGuard](https://nanovms.com/dev/tutorials/running-nanos-wireguard-vpn-gateway)
+ 
+ * [Directions for setting up a WireGuard bounce server](https://gitlab.com/ncmncm/wireguard-bounce-server)
+ 
+ * [How to easily configure WireGuard](https://www.stavros.io/posts/how-to-configure-wireguard/)
+ 
+ * [Getting Started with WireGuard](https://miguelmota.com/blog/getting-started-with-wireguard/)
+
+ * [Building a simple VPN with WireGuard with a Raspberry Pi as Server](https://snikt.net/blog/2020/01/29/building-a-simple-vpn-with-wireguard-with-a-raspberry-pi-as-server/)
+
+ * [WireGuard on Kubernetes with Adblocking](https://codingcoffee.dev/blog/wireguard_on_kubernetes_with_adblocking/)
+ 
+ * [Tunnel WireGuard via WebSockets](https://kirill888.github.io/notes/wireguard-via-websocket/) - Setting up WireGuard to work in restricted networks that block UDP traffic.
+ 
+ * [WireGuard Endpoint Discovery and NAT Traversal using DNS-SD](https://www.jordanwhited.com/posts/wireguard-endpoint-discovery-nat-traversal/)
+ 
+ ### Books
+ 
+ [Back to the Top](#table-of-contents)
+
+ * [Linux Security Fundamentals by David Clinton](https://www.google.com/books/edition/Linux_Security_Fundamentals/WPkCEAAAQBAJ?hl=en&gbpv=0)
+ 
+ * [Practical Linux Forensics: A Guide for Digital Investigators by Bruce Nikkel](https://www.google.com/books/edition/Practical_Linux_Forensics/TxhDEAAAQBAJ?hl=en&gbpv=0)
+ 
+ * [Computing in Communication Networks From Theory to Practice by Fabrizio Granelli, Frank H.P. Fitzek, Patrick Seeling](https://www.google.com/books/edition/Computing_in_Communication_Networks/oXLnDwAAQBAJ?hl=en&gbpv=0)
+ 
+ * [Security and Privacy in Communication Networks by Kevin Butler, Kun Sun, Nitesh Saxena, Noseong Park, Sara Foresti](https://www.google.com/books/edition/Security_and_Privacy_in_Communication_Ne/RYkOEAAAQBAJ?hl=en&gbpv=0)
+ 
+ * [Kubernetes Security and Observability by Brendan Creane, Amit Gupta](https://www.google.com/books/edition/Kubernetes_Security_and_Observability/pXZKEAAAQBAJ?hl=en&gbpv=0)
+ 
+### Podcasts
+
+[Back to the Top](#table-of-contents)
+
+ * [Open Source Security Podcast](https://podcasts.apple.com/us/podcast/open-source-security-podcast/id1151833659)
+
+ * [Self-Hosted](https://www.jupiterbroadcasting.com/show/self-hosted/)
+ 
+ * [Linux Unplugged](https://www.jupiterbroadcasting.com/show/linux-unplugged/)
+
+### WireGuard Tools
+
+[Back to the Top](#table-of-contents)
+
+[Wireguard Dashboard](https://github.com/donaldzou/wireguard-dashboard) is a simple and easy to use WireGuard dashboard written in Python and Flask.
+
+[WireGuard-Manager](https://github.com/complexorganizations/wireguard-manager) is a tool that enables you to build your own VPN in under a minute.
+
+[WireGuard installer](https://github.com/angristan/wireguard-install) is a WireGuard VPN installer for Linux servers.
+
+[Network Manager Wireguard](https://github.com/max-moser/network-manager-wireguard) is a Network-Manager VPN Plugin for WireGuard.
 
 [Wireguard Manager](https://github.com/complexorganizations/wireguard-manager) is a tool that enables you to build your own vpn under a minute.
 
@@ -57,13 +134,55 @@ NordLynx. Source: [NordVPN](https://nordvpn.com/blog/nordlynx-protocol-wireguard
 
 [PiVPN](https://pivpn.io/) is the simplest VPN installer, designed for [Raspberry Pi](https://www.raspberrypi.com).
 
+[WireGuardStatusbar](https://github.com/aequitas/macos-menubar-wireguard) is a macOS menubar icon for WireGuard/wg-quick.
+
+[Warp](https://blog.cloudflare.com/1111-warp-better-vpn/) is a free WireGuard VPN from Cloudflare that's trying to fix mobile Internet performance and security.
+
+[Firezone](https://firezone.dev/) is a self-hosted WireGuard®-based VPN server and Linux firewall.
+
+[LuCI](https://github.com/openwrt/luci) is an OpenWrt Configuration Interface.
+
+[Dsnet](https://github.com/naggie/dsnet/) is a simple command to manage a centralised wireguard VPN. Similar to wg-quick but quicker with key generation + address allocation.
+
+[WGctrl](https://github.com/WireGuard/wgctrl-go) is a package wgctrl enables control of WireGuard interfaces on multiple platforms.
+
+[WGzero](https://github.com/finzzz/wgzero) is a zero overhead wireguard setup.
+
+[WG make](https://github.com/tevino/wg-make) is a tool to help set up WireGuard based networks. Currently, it generates configurations for peers according to a single configuration file.
+
+[Guard](https://github.com/stellarproject/guard) is a gRPC server for managing wireguard tunnels.
+
+[Onetun](https://github.com/aramperes/onetun) is a user-space WireGuard port-forwarder -- access ports running on peers in your WireGuard network from any device; without having to install WireGuard locally or without root access (no iptables configs).
+
+[Wireproxy](https://github.com/octeep/wireproxy) is a userspace WireGuard client that connects to a WireGuard peer, and exposes a SOCKS5 proxy. (Use cases: Setting up WG as a VPN requires special privilege. It tells the kernel to create a special network interface to handle WG connection.
+
+[Mistborn](https://gitlab.com/cyber5k/mistborn) is a secure platform for easily standing up and managing your own cloud services: including firewall, ad-blocking, and multi-factor WireGuard VPN access.
+
+[Mistborn CLI](https://gitlab.com/cyber5k/mistborn-cli) is a Command-line interface for [Mistborn](https://gitlab.com/cyber5k/mistborn).
+
+[Wiretrustee](https://wiretrustee.com/) is a WireGuard®-based mesh network that connects your devices into a single private network.
+
+[Wiresteward](https://github.com/utilitywarehouse/wiresteward) is a WireGuard peer manager with OAuth2 authentication.
+
+[Innernet](https://github.com/tonarino/innernet) is a private network system that uses WireGuard under the hood.
+
+[Autowire](https://github.com/elghazal-a/autowire) is a tool that automatically configure Wireguard interfaces in distributed system. It supports Consul as backend.
+
+[Cloudblock](https://github.com/chadgeary/cloudblock) is a tool that deploys WireGuard VPN, Pi-Hole DNS Ad-blocking, and DNS over HTTPS in a cloud provider or locally using Terraform and Ansible.
+
+[WireGuard Cloud Gateway](https://galaxy.ansible.com/consensus/wireguard_cloud_gateway) is an Ansible role for setting up Wireguard as a gateway VPN server for cloud networks.
+
+[Ansible-role Wireguard](https://github.com/githubixx/ansible-role-wireguard) is an ansible role for installing WireGuard VPN. Supports Ubuntu, Debian, Archlinx, Fedora and CentOS.
+
+[Terraform AWS Wireguard](https://github.com/jmhale/terraform-aws-wireguard) is a Terraform module to deploy WireGuard on AWS.
+
 [Algo VPN](https://github.com/trailofbits/algo) is a set of Ansible scripts that simplify the setup of a personal WireGuard and IPsec VPN. It uses the most secure defaults available and works with common cloud providers.
 
 [Pro Custodibus](https://www.procustodibus.com/features/) is a tool for managing WireGuard with a variety of business VPN (Virtual Private Network) use cases, such as site-to-site connectivity, secure remote access from anywhere, secure access to the cloud (Amazon Web Services, Google Cloud Platform, Microsoft Azure, etc), and more.
 
 [Drago](https://seashell.github.io/drago) is a flexible configuration manager for WireGuard designed to make it simple to configure secure network overlays spanning heterogeneous nodes distributed across different clouds and physical locations. Drago is in active development, and we welcome contributions from the open-source community.
 
-[Netmaker](https://netmaker.org/) is a tool that helps connect any computers together over a secure, fast, private network, and manage multiple networks from a central server.
+[Netmaker](https://github.com/gravitl/netmaker) is a VPN platform that automates WireGuard from homelab to enterprise. The key distinctions in their solutions are: fast because it can use kernel WireGuard (instead of userspace WireGuard, which is slower), tailored towards the Cloud and Kubernetes, and fully self-hostable.
 
 [Kilo](https://github.com/squat/kilo) is a multi-cloud network overlay built on WireGuard and designed for Kubernetes. Kilo connects nodes in a cluster by providing an encrypted layer 3 network that can span across data centers and public clouds. The Pod network created by Kilo is always fully connected, even when the nodes are in different networks or behind NAT. By allowing pools of nodes in different locations to communicate securely, Kilo enables the operation of multi-cloud clusters. Kilo's design allows clients to VPN to a cluster in order to securely access services running on the cluster.
 
