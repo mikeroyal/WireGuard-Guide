@@ -20,7 +20,7 @@
      * [Tutorials](https://github.com/mikeroyal/WireGuard-Guide#tutorials)
      * [Books](https://github.com/mikeroyal/WireGuard-Guide#books)
      * [Podcasts](https://github.com/mikeroyal/WireGuard-Guide#podcasts)
-     * [WireGuard Tools](https://github.com/mikeroyal/WireGuard-Guide#wireguard)
+     * [WireGuard Tools](https://github.com/mikeroyal/WireGuard-Guide#wireguard-tools)
 
 2. [Networking](https://github.com/mikeroyal/WireGuard-Guide#networking)
 
@@ -84,7 +84,7 @@
 
  * [WireGuard on Kubernetes with Adblocking](https://codingcoffee.dev/blog/wireguard_on_kubernetes_with_adblocking/)
  
- * [Tunnel WireGuard via WebSockets](https://kirill888.github.io/notes/wireguard-via-websocket/) - Setting up WireGuard to work in restricted networks that block UDP traffic.
+ * [Tunnel WireGuard via WebSockets](https://kirill888.github.io/notes/wireguard-via-websocket/)
  
  * [WireGuard Endpoint Discovery and NAT Traversal using DNS-SD](https://www.jordanwhited.com/posts/wireguard-endpoint-discovery-nat-traversal/)
  
