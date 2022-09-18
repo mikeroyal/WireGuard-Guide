@@ -21,6 +21,9 @@
      * [Books](https://github.com/mikeroyal/WireGuard-Guide#books)
      * [Podcasts](https://github.com/mikeroyal/WireGuard-Guide#podcasts)
      * [WireGuard Tools](https://github.com/mikeroyal/WireGuard-Guide#wireguard-tools)
+     * [Setting up WireGuard with PiVPN](https://github.com/mikeroyal/WireGuard-Guide#setting-up-wireguard-with-pivpn)
+     * [Setting up WireGuard on Unraid](https://github.com/mikeroyal/WireGuard-Guide#setting-up-wireguard-on-unraid)
+     * [Setting up WireGuard on pfSense](https://github.com/mikeroyal/WireGuard-Guide#setting-up-wireguard-on-pfsense)
 
 2. [Networking](https://github.com/mikeroyal/WireGuard-Guide#networking)
 
@@ -197,6 +200,138 @@
 [Gluetun](https://github.com/qdm12/gluetun) is a lightwieght VPN client in a thin Docker container for multiple VPN providers, written in Go, and uses OpenVPN or Wireguard, DNS over TLS, with a few proxy servers built-in.
 
 [Ethr](https://github.com/microsoft/ethr) is a cross platform network performance measurement tool written in golang. The goal of this project is to provide a native tool for comprehensive network performance measurements of bandwidth, connections/s, packets/s, latency, loss & jitter, across multiple protocols such as TCP, UDP, HTTP, HTTPS, and across multiple platforms such as Windows, Linux and other Unix systems.
+
+### Setting up WireGuard with PiVPN
+
+[Back to the Top](#table-of-contents)
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190881122-3accce96-dbc1-46ba-9e67-bff78f160475.png">
+  <br />
+</p>
+
+**Installing PiVPN:**
+
+```sudo apt install curl -y```
+
+```curl -L https://install.pivpn.io | bash```
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880700-48034b3b-c3d2-459e-b52b-ed5d699fe31a.png">
+  <br />
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880702-9da353e8-2a25-4b9c-bb48-4d28af696e1e.png">
+  <br />
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880703-5d71fb3c-1ad9-4511-bb21-da60da25c9d7.png">
+  <br />
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880704-2042e18b-bc60-4b53-8251-2e3628b3083e.png">
+  <br />
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880705-8270b271-2cf4-49b7-b133-a04509167425.png">
+  <br />
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880706-401973df-8d3d-4c18-bd79-49948b8d1ee2.png">
+  <br />
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880708-9c8aedf5-81bd-4f93-bf87-d5c713194b13.png">
+  <br />
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880709-28f88ff7-38bf-4ebe-916c-8228c13050ea.png">
+  <br />
+</p>
+
+
+### Setting up WireGuard on Unraid
+
+[Back to the Top](#table-of-contents)
+
+ <p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190881124-635b4c29-41c6-423d-bff9-07e811a5f319.png">
+  <br />
+</p>
+
+ Select Apps, then search for WireGuard and install **Wireguard-Easy**.
+ 
+ <p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880956-9ad5d1e6-5905-46ec-9d94-6f1c0a42a997.jpg">
+  <br />
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880957-d20e3fa1-b219-407a-b80b-b84cc59bb2a0.png">
+  <br />
+  VPN manager
+</p>
+
+ Almost all of the settings can stay as default, however, there are a few that we will modify.
+
+   * Set the WG_HOST variable to be the IP address of your Unraid server.
+   * If you’d like to modify the WireGuard port (51820), you can do that here.
+   * Change the default Web GUI password. 
+    
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880958-e5c2c3f8-fd85-47c5-beb4-cc06d19899b4.png">
+  <br />
+</p>
+
+    
+### Setting up WireGuard on pfSense
+  
+  [Back to the Top](#table-of-contents)
+  
+ <p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190881128-e03216b9-ecc6-4c12-a41e-0de7d1b51579.png">
+  <br />
+</p>
+   
+   When looking at how to set up WireGuard on pfSense, the first thing that we need to do is install the package. Follow the instructions below to install the WireGuard package on pfSense.
+   
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880975-b103fead-2596-4819-bb82-18414baa4fb4.jpg">
+  <br />
+</p>
+
+
+* Open the Package Manager and search for WireGuard, then Install the latest version of the package.
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880976-1c7d0b18-8e50-4072-8f32-a6991b7d3923.jpg">
+  <br />
+</p>
+
+* After the package has installed, select VPN then WireGuard and under the Tunnels section, select Add Tunnel. 
+
+* In the Tunnel Configuration, set the Description as WireGuard, the Listen Port as 51820, then Generate private and public keys.
+
+* Copy the Public Key. We will need this for our client configuration.
+
+* Create the tunnel, then select Settings, and ensure that Enable WireGuard is selected. Then Save and Apply. 
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880978-70ccc9f1-f5be-479a-9f95-234a4f90ee87.jpg">
+  <br />
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190880979-6a1db7b4-bace-47ea-8ba5-43b375a821ba.jpg">
+  <br />
+</p>
 
 # Networking
 [Back to the Top](https://github.com/mikeroyal/WireGuard-Guide#table-of-contents)
