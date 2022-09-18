@@ -24,6 +24,7 @@
      * [Setting up WireGuard with PiVPN](https://github.com/mikeroyal/WireGuard-Guide#setting-up-wireguard-with-pivpn)
      * [Setting up WireGuard on Unraid](https://github.com/mikeroyal/WireGuard-Guide#setting-up-wireguard-on-unraid)
      * [Setting up WireGuard on pfSense](https://github.com/mikeroyal/WireGuard-Guide#setting-up-wireguard-on-pfsense)
+     * [Setting up WireGuard on OpenWRT](https://github.com/mikeroyal/WireGuard-Guide#setting-up-wireguard-on-openwrt)
 
 2. [Networking](https://github.com/mikeroyal/WireGuard-Guide#networking)
 
@@ -332,6 +333,117 @@
  <img src="https://user-images.githubusercontent.com/45159366/190880979-6a1db7b4-bace-47ea-8ba5-43b375a821ba.jpg">
   <br />
 </p>
+
+### Setting up WireGuard on OpenWRT
+
+[Back to the Top](#table-of-contents)
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190891717-a0972531-ec9d-4b7d-8543-2a68fb1792d2.png">
+  <br />
+</p>
+
+**Quick Links:**
+
+ * [WireGuard route all traffic through wireguard tunnel](https://openwrt.org/docs/guide-user/services/vpn/wireguard/all-traffic-through-wireguard)
+ * [Automated WireGuard Server and Multi-client](https://openwrt.org/docs/guide-user/services/vpn/wireguard/automated)
+ * [WireGuard basics](https://openwrt.org/docs/guide-user/services/vpn/wireguard/basics)
+ * [WireGuard client](https://openwrt.org/docs/guide-user/services/vpn/wireguard/client)
+ * [WireGuard extras](https://openwrt.org/docs/guide-user/services/vpn/wireguard/extras)
+ * [WireGuard performance](https://openwrt.org/docs/guide-user/services/vpn/wireguard/performance)
+ * [WireGuard Road-Warrior Configuration](https://openwrt.org/docs/guide-user/services/vpn/wireguard/road-warrior)
+ * [WireGuard](https://openwrt.org/docs/guide-user/services/vpn/wireguard/start)
+ * [WireGuard server](https://openwrt.org/docs/guide-user/services/vpn/wireguard/server)
+ * [WireGuard peers](https://openwrt.org/docs/guide-user/services/vpn/wireguard/serverclient)
+ * [Automated WireGuard site-to-site VPN configuration](https://openwrt.org/docs/guide-user/services/vpn/wireguard/site-to-site)
+ 
+
+In your router’s webUI, navigate to System - Software, click Update lists:
+
+In the Filter field, type WireGuard, locate and install the **wireguard, wireguard-tools, kmod-wireguard, and luci-app-wireguard packages.** **Note: The wireguard package is included in version 22.02.**
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190891718-b56b1152-2236-4d2c-bfbd-0f9f8f064e01.jpeg">
+  <br />
+</p>
+
+**Generate WireGuard keypair**
+
+ SSH into your router as ‘root’ ([OpenWrt Wiki](https://openwrt.org/docs/guide-quick-start/sshadministration)):
+
+   ```ssh root@192.168.1.1```
+
+ Generate WireGuard keys:
+
+  ```wg genkey | tee privatekey | wg pubkey > publickey```
+     
+  ```chmod 600 privatekey```
+
+  Note your Private & Public keys, you will need them later:
+
+  ```cat privatekey```
+    
+  ``` cat publickey```
+
+**Creating an Interface**
+
+ Navigate to Network - Interface,
+
+ Click the Add new interface... button and enter the following configuration:
+   * Name - give it any name
+   * Protocol - WireGuard VPN
+
+ Create interface
+
+ In the General Settings tab:
+   * Bring up on boot - Checked
+   * Private Key - copy and paste the generated previously Private key
+   * IP Address - enter the WireGuard IP Address obtained in the Client Area ending with /32, e.g. 172.27.124.169/32
+        
+        
+**Add a Firewall zone**
+
+ Navigate to Network - Firewall
+
+ Click the Add button and enter the following configuration:
+   * Name - Give it any name
+   *  Input - Reject
+   *  Output - Accept
+   *  Forward - Reject
+   *  Masquerading - Checked
+   *  MSS clamping - Checked
+   *  Covered networks - select the previously created VPN tunnel interface
+   *  Allow forward to destination zones - Unspecified
+   *  Allow forward from source zones - lan
+      
+ <p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190891722-8e64c915-9fbf-48e2-ae4d-73a1bd4c9489.jpeg">
+  <br />
+</p>
+       
+**DNS**
+
+ Navigate to Network - Interfaces
+
+ Click on the Edit button next to the WAN interface
+
+  In the Advanced Settings tab, uncheck the Use DNS servers advertised by peer and specify one of the following DNS servers in the Use custom DNS servers field:
+  
+  * 172.16.0.1 = regular DNS with no blocking
+  * 10.0.254.2 = standard AntiTracker to block advertising and malware domains
+  * 10.0.254.3 = Hardcore Mode AntiTracker to also block Google and Facebook domains
+      
+ <p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190891723-43aa1b88-ab91-4f87-935b-03f052add368.jpeg">
+  <br />
+</p> 
+
+Click the Save button.
+
+**Last Steps**
+
+  * A device reboot is not required, though it may be useful to confirm that everything behaves as expected.
+  * Run a leak test at [https://www.dnsleaktest.com](https://www.dnsleaktest.com/) via one of the internal network clients attached to your OpenWRT router.
 
 # Networking
 [Back to the Top](https://github.com/mikeroyal/WireGuard-Guide#table-of-contents)
