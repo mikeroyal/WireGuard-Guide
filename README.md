@@ -25,6 +25,7 @@
      * [Setting up WireGuard on Unraid](https://github.com/mikeroyal/WireGuard-Guide#setting-up-wireguard-on-unraid)
      * [Setting up WireGuard on pfSense](https://github.com/mikeroyal/WireGuard-Guide#setting-up-wireguard-on-pfsense)
      * [Setting up WireGuard on OpenWRT](https://github.com/mikeroyal/WireGuard-Guide#setting-up-wireguard-on-openwrt)
+     * [Setting up WireGuard on Home Assistant](https://github.com/mikeroyal/WireGuard-Guide#setting-up-wireguard-on-home-assistant)
 
 2. [Networking](https://github.com/mikeroyal/WireGuard-Guide#networking)
 
@@ -444,6 +445,69 @@ Click the Save button.
 
   * A device reboot is not required, though it may be useful to confirm that everything behaves as expected.
   * Run a leak test at [https://www.dnsleaktest.com](https://www.dnsleaktest.com/) via one of the internal network clients attached to your OpenWRT router.
+  
+### Setting up WireGuard on Home Assistant
+
+[Back to the Top](#table-of-contents)
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190974554-6611b441-2487-4e82-a5f5-018e6ee887d8.png">
+  <br />
+</p>
+
+**Install Wireguard Add-on in Home Assistant**
+
+ * Next, open up Home Assistant. Go to Supervisor > Add-on store, and search for WireGuard.
+ 
+ * Click the WireGuard addon, and the click Install.
+ 
+ <p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190974557-6e466f3a-75c5-46fe-ab95-406fad796318.png">
+  <br />
+</p>
+ 
+**Configure Wireguard Settings**
+
+After installing WireGuard, do not start it yet. We need to configure a few options first.
+
+ * Click the Configuration tab at the very top.
+
+ * There are **two blocks of code here: server and peers.** The server section is the WireGuard server info, and the peers section is where you’d add new devices that will connect to your VPN.
+ 
+ **Server Configuration**
+
+   * **Host:** add the subdomain you just created. (vpn.mydomain.com)
+   * **Addresses:** If your internal network is using the 192.168.x.x or 10.x.x.x range, you can leave the default IP addresses WireGuard has provided. (see note above)
+   * **DNS:** Set to your router’s internal IP address (**Open CMD > ipconfig /all > Under DNS servers**)
+        If you have Adguard or PiHole installed, you can use the IP address of those instead. This will allow you to block ads even when connected to the WireGuard VPN.
+
+**Peers Configuration**
+
+This is where you’ll create WireGuard configuration files for each of the devices you want to connect to WireGuard with. For this example, I’m using my phone and leaving ```allowed_ips``` and ```client_allowed_ips``` as is. If you adding multiple devices, then you’ll need to copy the entire block of code starting at name, give it a different name, and add the next available IP address (For example: 172.27.66.4)
+
+Click **Save** once finished.
+
+Then, go back to the Info tab and click **Start**.
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/190974558-dad4b4e4-295d-4074-84b8-44ca1be7078a.png">
+  <br />
+</p>
+
+**Port Forward**
+
+The next step is to forward port 51820 from your Home Assistant server through your router. Unfortunately, there are so many different types of routers, each with different steps to port forward. The important thing to note is that you’ll be **port forwarding 51820(wireguard port)** from the internal IP of your Home Assistant instance (for example: 192.168.68.24) and choosing the **UDP protocol only**.
+ 
+ **Download Wireguard app on mobile device**
+
+Download the WireGuard app from the [Apple App Store](https://apps.apple.com/us/app/wireguard/id1441195209) or [Google Play Store](https://play.google.com/store/apps/details?id=com.wireguard.android&hl=en_US&gl=US). You will need it for the next step.
+
+If all goes well, you can click into the new tunnel connection from within the app. If you see data flowing under the Transfer section, that means you are good to go.
+
+**Improving Security**
+
+Once you have everything setup and working correctly, you should read through the [WireGuard Addon docs](https://github.com/hassio-addons/addon-wireguard/blob/main/wireguard/DOCS.md) to setup up ```allowed_ips``` and ```client_allowed_ips``` to further secure your VPN instance. There’s also some other helpful options you can configure such as log level, but these are all optional.
+
 
 # Networking
 [Back to the Top](https://github.com/mikeroyal/WireGuard-Guide#table-of-contents)
