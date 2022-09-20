@@ -17,6 +17,9 @@
 # Table of Contents
 
 1. [Getting Started with WireGuard](https://github.com/mikeroyal/WireGuard-Guide#getting-started-with-wireguard)
+     * [What is WireGuard?](https://github.com/mikeroyal/WireGuard-Guide#what-is-wireguard)
+     * [What is Tailscale?](https://github.com/mikeroyal/WireGuard-Guide#what-is-tailscale)
+     * [What is Netmaker?](https://github.com/mikeroyal/WireGuard-Guide#what-is-netmaker)
      * [Tutorials](https://github.com/mikeroyal/WireGuard-Guide#tutorials)
      * [Books](https://github.com/mikeroyal/WireGuard-Guide#books)
      * [Podcasts](https://github.com/mikeroyal/WireGuard-Guide#podcasts)
@@ -45,12 +48,45 @@
 # Getting Started with WireGuard
 [Back to the Top](#table-of-contents)
 
+### What is WireGuard?
+
+[Back to the Top](#table-of-contents)
+
 [WireGuard®](https://www.wireguard.com/) is a straight-forward, fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec while avoiding the massive headache. WireGuard is designed as a general-purpose VPN for running on embedded interfaces and super computers alike, fit for many circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. 
 
 <p align="center">
  <img src="https://user-images.githubusercontent.com/45159366/190848622-d1c8b109-f08c-4a89-b43d-816c510e4f2e.png">
   <br />
 </p>
+
+### What is Tailscale?
+
+[Back to the Top](#table-of-contents)
+
+[Tailscale](https://github.com/tailscale) is a WireGuard-based app that makes secure, private networks easy for teams of any scale. It works like an [overlay network](https://tailscale.com/blog/how-tailscale-works/) between the computers of your networks using all kinds of [NAT traversal sorcery](https://tailscale.com/blog/how-nat-traversal-works/).
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/191139895-1f896f77-5903-4121-8100-73627d50818c.png">
+  <br />
+</p>
+
+How NAT Traversal works on a Home router. Credit: [Tailscale](https://tailscale.com/blog/how-nat-traversal-works/).
+
+[Headscale](https://github.com/juanfont/headscale) is an open source, self-hosted implementation of the Tailscale coordination server.
+
+### What is  Netmaker?
+
+[Back to the Top](#table-of-contents)
+
+[Netmaker](https://www.netmaker.org/) is a tool that enables you to create relays, gateways, full VPN meshes, and even zero trust networks. It's fully configurable to let you maximize the power of Wireguard.
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/45159366/191140241-4ad71f9a-7f1f-4d93-be3a-2d625b144dca.png">
+  <br />
+</p>
+
+NetMaker Architecture. Credit: [Netmaker](https://netmaker.readthedocs.io/en/v0.7.2/index.html).
+
 
 ### Tutorials
 [Back to the Top](#table-of-contents)
