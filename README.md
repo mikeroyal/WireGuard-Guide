@@ -65,8 +65,13 @@
 
 [Tailscale](https://github.com/tailscale) is a WireGuard-based app that makes secure, private networks easy for teams of any scale. It works like an [overlay network](https://tailscale.com/blog/how-tailscale-works/) between the computers of your networks using all kinds of [NAT traversal sorcery](https://tailscale.com/blog/how-nat-traversal-works/).
 
+ * [Tailscale Terraform Provider](https://github.com/tailscale/terraform-provider-tailscale)
+ * [Tailscale Docker extension](https://github.com/tailscale/docker-extension)
+ * [Tailscale Synology](https://github.com/tailscale/tailscale-synology)
+
+
 <p align="center">
- <img src="https://user-images.githubusercontent.com/45159366/191139895-1f896f77-5903-4121-8100-73627d50818c.png">
+ <img src="https://user-images.githubusercontent.com/45159366/191301110-4c688e1b-da46-4f19-a25f-c285d66403e5.png">
   <br />
 </p>
 
