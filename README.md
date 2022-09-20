@@ -74,7 +74,7 @@ How NAT Traversal works on a Home router. Credit: [Tailscale](https://tailscale.
 
 [Headscale](https://github.com/juanfont/headscale) is an open source, self-hosted implementation of the Tailscale coordination server.
 
-### What is  Netmaker?
+### What is Netmaker?
 
 [Back to the Top](#table-of-contents)
 
