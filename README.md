@@ -179,6 +179,10 @@ NetMaker Architecture. Credit: [Netmaker](https://netmaker.readthedocs.io/en/v0.
 
 [Headscale](https://github.com/juanfont/headscale) is an open source, self-hosted implementation of the Tailscale coordination server.
 
+[Terraform-provider-Tailscale](https://github.com/tailscale/terraform-provider-tailscale) is a project for for the [Tailscale Terraform provider](https://registry.terraform.io/providers/tailscale/tailscale). This Terraform provider that lets you interact with the [Tailscale](https://tailscale.com/) API.
+
+[Tailscale Chocolatey Package](https://github.com/tailscale/tailscale-chocolatey) is a [Chocolatey](https://chocolatey.org/) package of the [Tailscale](https://tailscale.com/) client, the private networking solution.
+
 [BoringTun](https://github.com/cloudflare/boringtun) is an implementation of the WireGuard® protocol designed for portability and speed. It's successfully deployed on millions of [iOS](https://apps.apple.com/us/app/1-1-1-1-faster-internet/id1423538627) and [Android](https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone&hl=en_US) consumer devices as well as thousands of Cloudflare Linux servers.
 
 [PiVPN](https://pivpn.io/) is the simplest VPN installer, designed for [Raspberry Pi](https://www.raspberrypi.com).
