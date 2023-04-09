@@ -173,6 +173,8 @@ NetMaker Architecture. Credit: [Netmaker](https://netmaker.readthedocs.io/en/v0.
 
 [Network Manager Wireguard](https://github.com/max-moser/network-manager-wireguard) is a Network-Manager VPN Plugin for WireGuard.
 
+[Wg Server for Windows (WS4W)](https://github.com/micahmo/WgServerforWindows) is a desktop application that allows running and managing a WireGuard server endpoint on Windows. 
+
 [Tailscale](https://github.com/tailscale) is a WireGuard-based app that makes secure, private networks easy for teams of any scale. It works like an [overlay network](https://tailscale.com/blog/how-tailscale-works/) between the computers of your networks using all kinds of [NAT traversal sorcery](https://tailscale.com/blog/how-nat-traversal-works/).
 
 [Tailnet lock](https://tailscale.com/kb/1226/tailnet-lock/) is a tool that allows you to verify that no node is added to your tailnet without being signed by trusted nodes in your tailnet. When tailnet lock is enabled, even if Tailscale infrastructure is malicious or hacked, attackers can’t send or receive traffic on your tailnet.
