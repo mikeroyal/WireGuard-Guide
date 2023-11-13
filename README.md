@@ -139,6 +139,12 @@ NetMaker Architecture. Credit: [Netmaker](https://netmaker.readthedocs.io/en/v0.
  * [Tunnel WireGuard via WebSockets](https://kirill888.github.io/notes/wireguard-via-websocket/)
  
  * [WireGuard Endpoint Discovery and NAT Traversal using DNS-SD](https://www.jordanwhited.com/posts/wireguard-endpoint-discovery-nat-traversal/)
+
+ * [Creating WireGuard VPN with Firezone in GCP - Medium](https://medium.com/@abdurrahman1270/creating-wireguard-vpn-with-firezone-in-gcp-3677266b7225)
+   
+ * [WireGuard Server: Google Cloud Platform](https://wireguard.how/server/google-cloud-platform/)
+   
+ * [Wireguard Server on GCP with Gl-iNet Beryl as a client](https://blog.kmassada.com/quickstart-wireguard-beryl-gcp/)
  
  ### Books
  
